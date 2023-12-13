@@ -9,6 +9,10 @@ import {HeadingNode, QuoteNode} from "@lexical/rich-text";
 import {HorizontalRuleNode} from "@lexical/react/LexicalHorizontalRuleNode";
 import {CodeNode} from "@lexical/code";
 import {LinkNode} from "@lexical/link";
+import AutoCompletionPlugin from "../plugins/AutoCompletionPlugin";
+import TreeViewPlugin from "../plugins/TreeViewPlugin";
+import {AutoFocusPlugin} from "@lexical/react/LexicalAutoFocusPlugin";
+import {TabIndentationPlugin} from "@lexical/react/LexicalTabIndentationPlugin";
 
 const theme = {};
 
@@ -18,7 +22,7 @@ const onError = (error: Error) => {
 
 const Editable = () => (
   <ContentEditable
-    className="prose text-base-content outline-none p-4 max-w-full w-full h-full overflow-y-scroll"
+    className="h-full prose p-6 outline-none max-w-full w-full snap-y scroll-mb-12"
     spellCheck={true}
   />
 )
@@ -47,7 +51,11 @@ export default function Editor() {
         ErrorBoundary={LexicalErrorBoundary}
       />
       <MarkdownShortcutPlugin/>
+      <TabIndentationPlugin/>
       <HistoryPlugin/>
+      <AutoCompletionPlugin/>
+      <TreeViewPlugin/>
+      <AutoFocusPlugin/>
     </LexicalComposer>
   )
 }

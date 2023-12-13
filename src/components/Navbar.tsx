@@ -1,19 +1,20 @@
-import Favicon from "../assets/favicon.svg?react";
 import Sidebar from "./Sidebar.tsx";
 import Setting from "./Setting.tsx";
 import {Icon} from "@iconify-icon/react";
+import ThemeController from "./ThemeController.tsx";
+import Logo from "./Logo.tsx";
 
 export default function Navbar() {
   return (
-    <nav className="flex-1 flex-grow-0 navbar bg-base-200 backdrop-blur drawer drawer-end">
+    <nav className="flex-none navbar bg-base-200 backdrop-blur drawer drawer-end drop-shadow">
       <div className="navbar-start">
         <div className="btn btn-ghost text-xl">
-          <Favicon className="w-8 fill-current"/>
-          <span>WritePro</span>
+          <Logo/>
         </div>
       </div>
       <div className="navbar-end">
         <div className="flex items-center space-x-2">
+          <ThemeController/>
           <label htmlFor="settings" className="btn btn-ghost">Settings</label>
           <div className="w-0.5 h-6 bg-base-300"/>
           <a className="btn btn-ghost btn-circle" href="https://github.com/BrandenXia/WritePro" target="_blank">

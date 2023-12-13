@@ -16,9 +16,11 @@
     "@lexical/markdown": "^0.12.5",
     "@lexical/react": "^0.12.5",
     "@lexical/rich-text": "^0.12.5",
+    "@reduxjs/toolkit": "^2.0.1",
     "lexical": "^0.12.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4"
   },
   "devDependencies": {
     "@iconify-icon/react": "^1.0.8",

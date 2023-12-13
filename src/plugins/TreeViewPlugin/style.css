@@ -1,0 +1,8 @@
+.tree-view {
+    @apply mockup-code w-1/2 h-fit px-3 absolute top-5 right-5 text-xs overflow-visible z-50 backdrop-blur;
+    --tw-bg-opacity: 0.85;
+}
+
+.tree-view > pre {
+    @apply overflow-x-scroll;
+}
